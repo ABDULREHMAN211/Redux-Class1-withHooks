@@ -1,6 +1,8 @@
+import { DECREMENT, INCREMENT, INCREMENT_BY_AMOUNT } from "./action"
 
 
  // var user = { name: "ARB", email: "abc@gmail.com"}
+
 
  //  var newUserOld = user;
 
@@ -12,15 +14,15 @@ const initialState = {
 }
 export const counterReducer = (state=initialState, action)=>{
        switch(action.type) {
-           case "INCREMENT": {
+           case INCREMENT: {
                return { ...state, Counter: state.Counter+1 }
            }
-           case "DECREMENT": {
+           case DECREMENT: {
                return {
                    ...state, Counter: state.Counter-1
                }
            }
-           case "INCREMENT_BY_AMOUNT": {
+           case INCREMENT_BY_AMOUNT: {
                return {
                    ...state, Counter: state.Counter + action.payload
                }
